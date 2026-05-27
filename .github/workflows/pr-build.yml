@@ -24,3 +24,9 @@ jobs:
 
       - name: Run production build
         run: bun run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build
+          path: .next
